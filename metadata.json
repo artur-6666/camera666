@@ -1,0 +1,6 @@
+{
+  "name": "Before After PDF Camera",
+  "description": "Professional documentation tool for before and after photos and PDF report generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
