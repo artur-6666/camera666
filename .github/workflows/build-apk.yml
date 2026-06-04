@@ -20,6 +20,14 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
+      - name: Verify and Fix Gradle Wrapper
+        run: |
+          if ! ./gradlew --version > /dev/null 2>&1; then
+            echo "Wrapper is corrupted or missing. Regenerating using system Gradle..."
+            gradle wrapper --gradle-version 8.10.2
+            chmod +x ./gradlew
+          fi
+
       - name: Build Debug APK
         run: ./gradlew assembleDebug
 
